@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import Button from './Button'
+import UseContextTutorial from './UseContextTutorial'
 
 function ParentComponent() {
   const buttonRef = useRef(null)
@@ -9,6 +10,7 @@ function ParentComponent() {
         Parent Button
       </button>
       <Button ref={buttonRef} />
+      <UseContextTutorial />
     </div>
   )
 }
