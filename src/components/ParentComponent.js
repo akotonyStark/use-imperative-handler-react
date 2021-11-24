@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Button from './Button'
 
 function ParentComponent() {
+  const buttonRef = useRef(null)
   return (
     <div>
-      <button>Parent Button</button>
-
-      <Button />
+      <button onClick={() => buttonRef.current.alterToggle()}>
+        Parent Button
+      </button>
+      <Button ref={buttonRef} />
     </div>
   )
 }
